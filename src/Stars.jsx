@@ -4,7 +4,7 @@ export function Stars ({count}){
     for(let i = 0; i<count;i++){
         stars.push(star);
     }
-    let starList = stars.map(el=><li>{el}</li>)
+    let starList = stars.map((el,id)=><li key={id}>{el}</li>)
     return(
         <ul className="card-body-stars u-clearfix">
             {starList}
